@@ -6,4 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Persistence\" />
+    <None Remove="Persistence\Configuration\" />
+    <None Remove="Persistence\Migrations\" />
+    <None Remove="Identity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Persistence\" />
+    <Folder Include="Persistence\Configuration\" />
+    <Folder Include="Persistence\Migrations\" />
+    <Folder Include="Identity\" />
+  </ItemGroup>
 </Project>

@@ -6,4 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Common\" />
+    <None Remove="Common\Behaviours\" />
+    <None Remove="Common\Exceptions\" />
+    <None Remove="Common\Interfaces\" />
+    <None Remove="Common\Mapping\" />
+    <None Remove="Common\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Common\Behaviours\" />
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="Common\Interfaces\" />
+    <Folder Include="Common\Mapping\" />
+    <Folder Include="Common\Models\" />
+  </ItemGroup>
 </Project>
