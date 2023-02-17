@@ -1,7 +1,6 @@
-﻿using System;
-namespace Domain.Common;
+﻿namespace Domain.Common;
 
-public class AuditBaseEntity : BaseEntity
+public abstract class AuditBaseEntity : BaseEntity
 {
     public DateTime CreatedAt { get; set; }
 
@@ -11,4 +10,3 @@ public class AuditBaseEntity : BaseEntity
 
     public string? LastModifiedBy { get; set; }
 }
-
