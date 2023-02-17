@@ -13,6 +13,8 @@
     <None Remove="Common\" />
     <None Remove="Interfaces\" />
     <None Remove="MediatR" />
+    <None Remove="Enums\" />
+    <None Remove="Events\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -20,6 +22,8 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Common\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Events\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.0.0" />
