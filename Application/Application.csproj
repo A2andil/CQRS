@@ -13,6 +13,9 @@
     <None Remove="Common\Interfaces\" />
     <None Remove="Common\Mapping\" />
     <None Remove="Common\Models\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="FluentValidation.DependencyInjectionExtensions" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
@@ -21,5 +24,13 @@
     <Folder Include="Common\Interfaces\" />
     <Folder Include="Common\Mapping\" />
     <Folder Include="Common\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
   </ItemGroup>
 </Project>
