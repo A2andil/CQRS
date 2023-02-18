@@ -19,6 +19,12 @@
     <None Remove="Common\Security\" />
     <None Remove="Microsoft.Extensions.DependencyInjection" />
     <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="TodoItems\" />
+    <None Remove="TodoItems\Commands\" />
+    <None Remove="TodoItems\Queries\" />
+    <None Remove="TodoItems\Commands\CreateTodoItem\" />
+    <None Remove="TodoItems\Commands\UpdateTodoItem\" />
+    <None Remove="TodoItems\Commands\DeleteTodoItem\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
@@ -28,6 +34,12 @@
     <Folder Include="Common\Mapping\" />
     <Folder Include="Common\Models\" />
     <Folder Include="Common\Security\" />
+    <Folder Include="TodoItems\" />
+    <Folder Include="TodoItems\Commands\" />
+    <Folder Include="TodoItems\Queries\" />
+    <Folder Include="TodoItems\Commands\CreateTodoItem\" />
+    <Folder Include="TodoItems\Commands\UpdateTodoItem\" />
+    <Folder Include="TodoItems\Commands\DeleteTodoItem\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
