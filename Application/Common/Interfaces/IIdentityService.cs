@@ -14,4 +14,3 @@ public interface IIdentityService
 
     Task<Result> DeleteUserAsync(string userId);
 }
-

@@ -16,6 +16,7 @@
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="FluentValidation.DependencyInjectionExtensions" />
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Common\Security\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
@@ -24,6 +25,7 @@
     <Folder Include="Common\Interfaces\" />
     <Folder Include="Common\Mapping\" />
     <Folder Include="Common\Models\" />
+    <Folder Include="Common\Security\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
