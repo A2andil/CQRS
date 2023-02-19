@@ -26,6 +26,10 @@
     <None Remove="TodoItems\Commands\UpdateTodoItem\" />
     <None Remove="TodoItems\Commands\DeleteTodoItem\" />
     <None Remove="TodoItems\EventHandlers\" />
+    <None Remove="TodoLists\" />
+    <None Remove="TodoLists\Commands\" />
+    <None Remove="TodoLists\Queries\" />
+    <None Remove="TodoLists\Queries\ExportToDtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
@@ -42,6 +46,10 @@
     <Folder Include="TodoItems\Commands\UpdateTodoItem\" />
     <Folder Include="TodoItems\Commands\DeleteTodoItem\" />
     <Folder Include="TodoItems\EventHandlers\" />
+    <Folder Include="TodoLists\" />
+    <Folder Include="TodoLists\Commands\" />
+    <Folder Include="TodoLists\Queries\" />
+    <Folder Include="TodoLists\Queries\ExportToDtos\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />

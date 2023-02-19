@@ -12,6 +12,13 @@
     <None Remove="Persistence\Configuration\" />
     <None Remove="Persistence\Migrations\" />
     <None Remove="Identity\" />
+    <None Remove="Common\" />
+    <None Remove="Files\" />
+    <None Remove="Files\Maps\" />
+    <None Remove="CsvHelper" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
@@ -19,5 +26,18 @@
     <Folder Include="Persistence\Configuration\" />
     <Folder Include="Persistence\Migrations\" />
     <Folder Include="Identity\" />
+    <Folder Include="Common\" />
+    <Folder Include="Files\" />
+    <Folder Include="Files\Maps\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Application\Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="30.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.14" />
   </ItemGroup>
 </Project>
