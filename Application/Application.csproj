@@ -25,6 +25,7 @@
     <None Remove="TodoItems\Commands\CreateTodoItem\" />
     <None Remove="TodoItems\Commands\UpdateTodoItem\" />
     <None Remove="TodoItems\Commands\DeleteTodoItem\" />
+    <None Remove="TodoItems\EventHandlers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
@@ -40,6 +41,7 @@
     <Folder Include="TodoItems\Commands\CreateTodoItem\" />
     <Folder Include="TodoItems\Commands\UpdateTodoItem\" />
     <Folder Include="TodoItems\Commands\DeleteTodoItem\" />
+    <Folder Include="TodoItems\EventHandlers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
