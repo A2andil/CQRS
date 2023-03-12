@@ -1,11 +1,51 @@
 ﻿using System;
-namespace Infrastructure.Persistence
+using System.Reflection;
+using Application.Common.Interfaces;
+using Domain.Entities;
+using Infrastructure.Common;
+using Infrastructure.Identity;
+using Infrastructure.Persistence.Interceptors;
+using MediatR;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
+namespace Infrastructure.Persistence;
+
+public class ApplicationDBContext: IdentityDbContext<ApplicationUser>, IApplicationDbContext
 {
-	public class ApplicationDBContext
+    private readonly IMediator _mediator;
+    private readonly AuditableEntitySaveChangesInterceptor _auditableEntitySaveChangesInterceptor;
+
+    public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options,
+        IMediator mediator,
+        AuditableEntitySaveChangesInterceptor auditableEntitySaveChangesInterceptor) : base(options)
 	{
-		public ApplicationDBContext()
-		{
-		}
-	}
+        _mediator = mediator;
+        _auditableEntitySaveChangesInterceptor = auditableEntitySaveChangesInterceptor;
+    }
+
+    public DbSet<TodoList> TodoLists => Set<TodoList>();
+
+    public DbSet<TodoItem> TodoItems => Set<TodoItem>();
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+        base.OnModelCreating(builder);
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.AddInterceptors(_auditableEntitySaveChangesInterceptor);
+    }
+
+    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        await _mediator.DispatchDomainEvents(this);
+
+        return await base.SaveChangesAsync(cancellationToken);
+    }
 }
 
